@@ -53,6 +53,7 @@ class TeachingDataBase(object):
         return len(self._teaching_joint_values)
 
 
+
 def getch(timeout):
     # 1文字のキーボード入力を返す
     fd = sys.stdin.fileno()
@@ -109,7 +110,7 @@ def main():
 
     # トルクをオフにする
     preset_pid_gain(TORQUE_OFF_PID)
-    print "Torque OFF"
+    print ("Torque OFF")
 
     while do_shutdown is False:
         poses_num = data_base.get_num_of_poses()
@@ -117,7 +118,7 @@ def main():
 
         # リスタート時はキーボード入力の説明を表示
         if do_restart:
-            print ""
+            print ("")
             if is_teaching_mode:
                 print "[Teaching Mode]",
                 print "[Next Pose:" + str(pose_index) + " of " + str(poses_num) + "]"
@@ -163,7 +164,7 @@ def main():
 
             if is_teaching_mode:
                 print "Torque OFF"
-                preset_pid_gain(TORQUE_OFF_PID)
+                preset_pid_gain(3)
             else:
                 print "Torque ON"
                 # PIDゲインをdefaultに戻すと、目標姿勢に向かって急に動き出す
@@ -173,7 +174,7 @@ def main():
                 arm.go()
                 gripper.set_joint_value_target(gripper.get_current_joint_values())
                 gripper.go()
-                preset_pid_gain(TORQUE_ON_PID)
+                preset_pid_gain(4)
 
             do_restart = True
             continue

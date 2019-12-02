@@ -27,7 +27,7 @@ def kill_node(nodename):
 
 def callback(msg):
     kill_node('arm_move')
-    rospy.sleep(10.0)
+    rospy.sleep(12.0)
     bool_c = msg.data
     print (bool_c)
     body_up()

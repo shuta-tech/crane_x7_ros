@@ -11,6 +11,8 @@
 ```
  $ sudo chmod 777/dexv/tty/USB0
 
+ $roslaunch crane_x7_bringup demo.launch fake_execution:=false
+ 
  $ roslaunch crane_x7_control crane_x7_control.launch
  ```
 

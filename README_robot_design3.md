@@ -16,7 +16,9 @@
 
 ②プログラムを実行するため、以下のコマンドを入力
 
- `$ rosrun crane_x7_examples crane_x7_pick_and_place_demo2.py`
+```
+ $ rosrun crane_x7_examples crane_x7_pick_and_place_demo2.py`
+```
 
 プログラムを実行した際の成功動画
 
@@ -26,11 +28,15 @@
 
 ①PCでシミュレータを起動するため、以下のコマンドを入力
 
- `$ roslaunch crane_x7_gazebo crane_x7_with_table launch`
+```
+ $ roslaunch crane_x7_gazebo crane_x7_with_table launch
+```
 
 ②プログラムを実行するため、以下のコマンドを入力
 
- `$ rosrun crane_x7_examples crane_x7_pick_and_place_demo2.py`
+```
+ $ rosrun crane_x7_examples crane_x7_pick_and_place_demo2.py
+```
 
 ※このプログラムでは表示されている物体はつかまないため、動きだけの確認である。また、
 

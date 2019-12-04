@@ -8,9 +8,9 @@
 
 ①PCにマニピュレータをUSB経由で接続し、次のコマンドを入力
 
- `$ sudo chmod 777/dexv/tty/USB0`
+```$ sudo chmod 777/dexv/tty/USB0```
 
- `$ roslaunch crane_x7_control crane_x7_control.launch`
+```$ roslaunch crane_x7_control crane_x7_control.launch```
 
 ②プログラムを実行するため、以下のコマンドを入力
 

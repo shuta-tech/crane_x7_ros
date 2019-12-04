@@ -18,7 +18,7 @@
 
 プログラムを実行した際の成功動画
 
-https://www.youtube.com/watch?v=m2CDxoViR-k&feature=youtu.be
+[https://youtu.be/m2CDxoViR-k](https://www.youtube.com/watch?v=m2CDxoViR-k&feature=youtu.be)
 
 ### シミュレータを使う場合
 

@@ -14,9 +14,11 @@
 
 ②プログラムを実行するため、以下のコマンドを入力
 
- `$ rosrun crane_x7_examples crane_x7_pick_and_place.py`
+ `$ rosrun crane_x7_examples crane_x7_pick_and_place_demo2.py`
 
 プログラムを実行した際の成功動画
+
+https://www.youtube.com/watch?v=m2CDxoViR-k&feature=youtu.be
 
 ### シミュレータを使う場合
 
@@ -26,7 +28,7 @@
 
 ②プログラムを実行するため、以下のコマンドを入力
 
- `$ rosrun crane_x7_examples crane_x7_pick_and_place.py`
+ `$ rosrun crane_x7_examples crane_x7_pick_and_place_demo2.py`
 
 ※このプログラムでは表示されている物体はつかまないため、動きだけの確認である。また、
 

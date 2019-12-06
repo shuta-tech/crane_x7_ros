@@ -19,7 +19,7 @@
 ②プログラムを実行するため、以下のコマンドを入力
 
 ```
- $ rosrun crane_x7_examples crane_x7_pick_and_place_demo2.py`
+ $ rosrun crane_x7_examples crane_x7_pick_and_place_demo2.py
 ```
 
 プログラムを実行した際の成功動画
@@ -40,6 +40,6 @@
  $ rosrun crane_x7_examples crane_x7_pick_and_place_demo2.py
 ```
 
-※このプログラムでは表示されている物体はつかまないため、動きだけの確認である。また、
+※このプログラムでは表示されている物体はつかまないため、動作確認のみです。また、
 
-Move itで動きは計算しているため同じ動きにならない可能性があります。
+Move itで動きは同じ動きにならない可能性があります。

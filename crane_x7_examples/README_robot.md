@@ -7,12 +7,12 @@
 
 ※クローンして動作しない場合は、プログラムをコピーペーストしてください。
 
-実機の動作確認は[README.md](https://github.com/piropann/crane_x7_ros/blob/master/crane_x7_examples/README.md)参照
-
 今回使用するプログラムは[crane_x7_pick_and_place_demo2.py](https://github.com/shuta-tech/crane_x7_ros/blob/robot_design3/crane_x7_examples/scripts/crane_x7_pick_and_place_demo2.py)である。
 
 
 ### 実機の場合
+実機の動作確認は[README.md](https://github.com/piropann/crane_x7_ros/blob/master/crane_x7_examples/README.md)参照
+
 ①PCにマニピュレータをUSB経由で接続し、次のコマンドを入力
 ```
  $ sudo chmod 777/dexv/tty/USB0

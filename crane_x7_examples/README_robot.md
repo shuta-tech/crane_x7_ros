@@ -3,7 +3,7 @@
 
 ①[crane_x7_ros](https://github.com/shuta-tech/crane_x7_ros)に移動し、ブランチをrobot_design3に変更する
 
-②ブランチをクローンするため場合はこの[サイト](https://qiita.com/shim0mura/items/85aa7fc762112189bd73)を参照のこと
+②プログラムをクローンする
 
 ※クローンして動作しない場合は、プログラムをコピーペーストしてください。
 

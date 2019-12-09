@@ -25,7 +25,6 @@
  ```
 
 ②物体を写真のように配置
- /home/shuta/Downloads/robot.png
 
 ③プログラムを実行するため、以下のコマンドを入力
 

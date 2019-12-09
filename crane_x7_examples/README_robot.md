@@ -41,7 +41,7 @@
 ①PCでシミュレータを起動するため、以下のコマンドを入力
 
 ```
- $ roslaunch crane_x7_gazebo crane_x7_with_table launch
+ $ roslaunch crane_x7_gazebo crane_x7_with_table.launch
 ```
 
 ②プログラムを実行するため、以下のコマンドを入力

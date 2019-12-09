@@ -4,6 +4,7 @@
 ①ブランチをrobot_design3に変更する
 
 ②プログラムをクローンする
+※クローンして動作しない場合は、プログラムをコピーペーストしてください。
 
 
 
@@ -13,7 +14,6 @@
 
 
 ### 実機の場合
-
 ①PCにマニピュレータをUSB経由で接続し、次のコマンドを入力
 
 ```
@@ -24,7 +24,10 @@
  $ roslaunch crane_x7_control crane_x7_control.launch
  ```
 
-②プログラムを実行するため、以下のコマンドを入力
+②物体を写真のように配置
+ /home/shuta/Downloads/robot.png
+
+③プログラムを実行するため、以下のコマンドを入力
 
 ```
  $ rosrun crane_x7_examples crane_x7_pick_and_place_demo2.py

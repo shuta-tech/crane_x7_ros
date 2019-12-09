@@ -1,13 +1,11 @@
 ## 使用方法
 
 
-①ブランチをrobot_design3に変更する
+①[crane_x7_ros](https://github.com/shuta-tech/crane_x7_ros)に移動し、ブランチをrobot_design3に変更する
 
 ②プログラムをクローンする
 
 ※クローンして動作しない場合は、プログラムをコピーペーストしてください。  
-  
-
 実機の動作確認は[README.md](https://github.com/piropann/crane_x7_ros/blob/master/crane_x7_examples/README.md)参照
 
 今回使用するプログラムは[crane_x7_pick_and_place_demo2.py](https://github.com/shuta-tech/crane_x7_ros/blob/robot_design3/crane_x7_examples/scripts/crane_x7_pick_and_place_demo2.py)である。

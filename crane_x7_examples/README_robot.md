@@ -26,7 +26,8 @@
  ```
 
 ②物体を写真のように配置
-[robot.png](https://github.com/shuta-tech/crane_x7_ros/blob/master/crane_x7_examples/srv/robot.png)
+
+![robot.png](https://github.com/shuta-tech/crane_x7_ros/blob/master/crane_x7_examples/srv/robot.png)
 
 ③プログラムを実行するため、以下のコマンドを入力
 

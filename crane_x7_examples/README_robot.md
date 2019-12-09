@@ -1,11 +1,15 @@
 ## 使用方法
 
+#### プログラムダウンロード方法
+以下のコマンドを入力すれば、ダウンロード可能
 
-①[crane_x7_ros](https://github.com/shuta-tech/crane_x7_ros)に移動し、ブランチをrobot_design3に変更する
+$ cd ~/catkin_ws/src/
+$ rm -rf ./crane_x7_ros
+$ git clone -b robot_design3 https://github.com/shuta-tech/crane_x7_ros.git
+$ ( cd ~/catkin_ws && catkin_make )
+$ rosdep install -r -y --from-paths --ignore-src crane_x7_ros
 
-②プログラムをクローンする
-
-※クローンして動作しない場合は、プログラムをコピーペーストしてください。
+※プログラムをダウンロードする際にcrane_x7内のプログラムは削除するため、今あるプログラムをgithub上に上げておくこと。
 
 今回使用するプログラムは[crane_x7_pick_and_place_demo2.py](https://github.com/shuta-tech/crane_x7_ros/blob/robot_design3/crane_x7_examples/scripts/crane_x7_pick_and_place_demo2.py)である。
 

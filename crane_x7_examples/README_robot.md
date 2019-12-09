@@ -15,7 +15,7 @@
 ### 実機の場合
 
 ①PCにマニピュレータをUSB経由で接続し、次のコマンドを入力
-
+/home/shuta/Downloads/robot.png
 ```
  $ sudo chmod 777/dexv/tty/USB0
 

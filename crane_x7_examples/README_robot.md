@@ -2,12 +2,17 @@
 
 #### プログラムダウンロード方法
 以下のコマンドを入力すれば、ダウンロード可能
-
+```
 $ cd ~/catkin_ws/src/
+
 $ rm -rf ./crane_x7_ros
+
 $ git clone -b robot_design3 https://github.com/shuta-tech/crane_x7_ros.git
+
 $ ( cd ~/catkin_ws && catkin_make )
+
 $ rosdep install -r -y --from-paths --ignore-src crane_x7_ros
+```
 
 ※プログラムをダウンロードする際にcrane_x7内のプログラムは削除するため、今あるプログラムをgithub上に上げておくこと。
 

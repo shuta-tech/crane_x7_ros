@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/shuta/catkin_ws/devel/include/**",
+                "/opt/ros/melodic/include/**",
+                "/home/shuta/catkin_ws/src/beginner_tutorials/include/**",
+                "/home/shuta/catkin_ws/src/crane_x7_ros/crane_x7_control/include/**",
+                "/home/shuta/catkin_ws/src/crane_x7_ros/crane_x7_edge/include/**",
+                "/home/shuta/catkin_ws/src/realsense-ros/realsense2_camera/include/**",
+                "/home/shuta/catkin_ws/src/roboticsgroup_gazebo_plugins/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

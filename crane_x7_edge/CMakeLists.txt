@@ -56,5 +56,5 @@ include_directories(include ${catkin_INCLUDE_DIRS} ${OpenCV_INCLDUE_DIRS})
 ## Install ##
 #############
 
-add_executable(edg src/opencv.cpp)
+add_executable(edg src/opencv_fp.cpp)
 target_link_libraries(edg ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})

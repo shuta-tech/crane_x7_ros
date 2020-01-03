@@ -5,6 +5,7 @@
 #include <std_msgs/String.h>
 #include <highgui.h>
 
+
 using namespace::cv;
 std::string msg = "0";
 std::string msg_1 = "0"; 
@@ -48,31 +49,20 @@ void depth_estimater::rgbImageCallback(const sensor_msgs::ImageConstPtr& msg){
 	Mat mask_image, output_image;
     int px_1,x,y,x_mem,y_mem;
     int flag = 0;
+
     // inRangeを用いてフィルタリング
 	inRange(hsv_img, lower, upper, mask_image);
 
     //エッジ検出部
     int count = 0;
-    cv::Canny(mask_image, output_image, 125, 255);
+    cv::Canny(mask_image, output_image, 255, 255);
     cv::imshow("edge image", output_image);
-    //エッジ検出
-
+    //コーナーを検出
+   
     std::cout << count << std::endl;
-    /*if(flag == 1){
-        cv::rectangle(output_image,cv::Point(x_mem-200,y_mem),cv::Point(x_mem-500,y_mem+300),cv::Scalar(0,200,0),3,4);
-        //std::cout << x_mem << "," << y_mem << std::endl;
-        flag = 0;
-    }*/
-   /* cv::imshow("RGB image", output_image);
-    if(count > 3000){
-        std::string msg = "1";
-        pub.publish(msg);
-        msg = "0";
-    }*/
-
-    
-    cv::waitKey(10);
+    cv::waitKey(3);
 }
+
 int main(int argc, char **argv){
     ros::init(argc, argv, "depth_estimater");
     depth_estimater depth_estimater;

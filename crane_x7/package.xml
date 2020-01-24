@@ -24,8 +24,9 @@
   <run_depend>crane_x7_msgs</run_depend>
   <run_depend>crane_x7_gazebo</run_depend>
   <run_depend>crane_x7_robot_design3</run_depend>
-
+  <run_depend>crane_x7_robot_edge</run_depend>
   <export>
     <metapackage/>
   </export>
 </package>
+ 

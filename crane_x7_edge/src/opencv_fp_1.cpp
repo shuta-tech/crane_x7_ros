@@ -8,7 +8,6 @@
 #include <std_msgs/String.h>
 #include <opencv2/imgproc/imgproc.hpp>
 
-
 using namespace std;
 cv::Mat image;
 
@@ -64,24 +63,32 @@ void imageCallback(const sensor_msgs::ImageConstPtr& input) {
 			points_curr.resize(k);
 			points_prev.resize(k);
 		}
-
+ 
 
 		// 特徴点を丸で描く
 		for (int i = 0; i < points_curr.size(); i++) {
 			cv::Scalar c(0, 255, 0);
 			printf("i = %d", i);
 
-			if (i == 3)
+			/*if(i < 4 && i >= 0){
+				std::string feature = "1";
+				pub.publish(feature);
+				feature = "0";
+			}*/
+			if (i == 2)
 			{
 				count++;
 				printf("count = %d\n", count);
-
-			}if(count >= 80){
+				
+			}else if(count >= 60){
 				std::string feature = "1";
 				pub.publish(feature);
 				feature = "0";
 			}
 
+
+
+			
 			if (cv::norm(points_prev[i] - points_curr[i]) > 0.5) {
 				c = cv::Scalar(0, 100, 255);
 			}
@@ -103,8 +110,6 @@ void imageCallback(const sensor_msgs::ImageConstPtr& input) {
         //cv::imshow("image", image);
         //cv::waitKey(1);
 }
-
-
 
 int main(int argc, char** argv) {
         ros::init (argc, argv, "img_subscriber");

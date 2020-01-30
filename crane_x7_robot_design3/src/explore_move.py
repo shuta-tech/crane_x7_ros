@@ -31,6 +31,9 @@ def main():
 
 
     # SRDFに定義されている"home"の姿勢にする
+    arm.set_named_target("vertical")
+    arm.go()
+    rospy.sleep(3)
     arm.set_named_target("home")
     arm.go()
     gripper.set_joint_value_target([0.1, 0.1])
@@ -38,79 +41,44 @@ def main():
 
     # 左
     target_pose = geometry_msgs.msg.Pose()
-    target_pose.position.x = 0.0541737954085
-    target_pose.position.y = 0.165643542357
-    target_pose.position.z = 0.129005931973
+    target_pose.position.x = 0.29530626873
+    target_pose.position.y = 0.10362120555
+    target_pose.position.z =  0.245917491898
     q = quaternion_from_euler(-3.14, 0.0, -3.14/2.0)  # 上方から掴みに行く場合
-    target_pose.orientation.x = -0.493243329595
-    target_pose.orientation.y = 0.725260234009
-    target_pose.orientation.z = 0.292664223979
-    target_pose.orientation.w = 0.380862524776
+    target_pose.orientation.x =-0.811127380552
+    target_pose.orientation.y = 0.579297151378
+    target_pose.orientation.z = -0.0118768496306
+    target_pose.orientation.w = 0.0796625593835
     arm.set_pose_target(target_pose)  # 目標ポーズ設定
     arm.go()  # 実行
 
-    rospy.sleep(2.0)
+    
 
-    arm.set_named_target("home")
-    arm.go()
     #gripper.set_joint_value_target([0.7, 0.7])
     #gripper.go()
-
+    '''
     # 左中
-    target_pose = geometry_msgs.msg.Pose()
-    target_pose.position.x =  0.222562384824
-    target_pose.position.y =  0.153946645793
-    target_pose.position.z =  0.145367063089
+    target_pose = geometry_msgs.msg.Pose()/camera/depth/color/points
+    target_pose.position.x =  0.337012862721
+    target_pose.position.y =  0.0517014049579
+    target_pose.position.z =  0.14309330885
     q = quaternion_from_euler(-3.14, 0.0, -3.14/2.0)  # 上方から掴みに行く場合
-    target_pose.orientation.x = -0.37012010179
-    target_pose.orientation.y =  0.672156907829
-    target_pose.orientation.z = -0.578379233916
-    target_pose.orientation.w = 0.276936207967
+    target_pose.orientation.x = 0.632287438308
+    target_pose.orientation.y = -0.771793636354
+    target_pose.orientation.z = -0.0160233105463
+    target_pose.orientation.w = 0.065501387472
     arm.set_pose_target(target_pose)  # 目標ポーズ設定
     arm.go()  # 実行
-
-    rospy.sleep(2.0)
+    '''
+    
 
     # ハンドを閉じる
    # gripper.set_joint_value_target([0.05, 0.05])
    # gripper.go()
-    arm.set_named_target("home")
-    arm.go()
+
     # 右中
-    target_pose = geometry_msgs.msg.Pose()
-    target_pose.position.x = 0.171030885261
-    target_pose.position.y = -0.173626113727
-    target_pose.position.z = 0.162637874467
-    q = quaternion_from_euler(-3.14, 0.0, -3.14/2.0)  # 上方から掴みに行く場合
-    target_pose.orientation.x = 0.167282244215
-    target_pose.orientation.y = 0.86290183543
-    target_pose.orientation.z = 0.216959851386
-    target_pose.orientation.w = 0.424671044537
-    arm.set_pose_target(target_pose)  # 目標ポーズ設定
-    arm.go()	
-
-    rospy.sleep(2.0)
-
-    # 実行
-    arm.set_named_target("home")
-    arm.go()
-    # 右
-    target_pose = geometry_msgs.msg.Pose()
-    target_pose.position.x =   0.0466286918116
-    target_pose.position.y =  -0.129318720394
-    target_pose.position.z =  0.156499396902
-    q = quaternion_from_euler(-3.14, 0.0, -3.14/2.0)  # 上方から掴みに行く場合
-    target_pose.orientation.x = 0.505359038888
-    target_pose.orientation.y = 0.710421862758
-    target_pose.orientation.z = -0.308887185991
-    target_pose.orientation.w = 0.380133825198
-    arm.set_pose_target(target_pose)  # 目標ポーズ設定
-    arm.go()  # 実行
-
-    rospy.sleep(2.0)
-
-    arm.set_named_target("home")
-    arm.go()
+  
+    rospy.sleep(1000)
     print("done")
 if __name__ == '__main__':
 

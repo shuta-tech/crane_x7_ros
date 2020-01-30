@@ -12,22 +12,11 @@ from subprocess import Popen
 from subprocess import PIPE
 flag_demo = 0
 key = 0
-def kill_node(nodename): 
-	p2=Popen(['rosnode','list'],stdout=PIPE) 
-	p2.wait() 
-	nodelist=p2.communicate() 
-	nd=nodelist[0] 
-	nd=nd.split("\n") 
-	for i in range(len(nd)): 
-		tmp=nd[i] 
-		ind=tmp.find(nodename) 
-		if ind==1: 
-			call(['rosnode','kill',nd[i]]) 
-			break 
+
 
 def callback(msg):
-    kill_node('arm_move')
-    rospy.sleep(12.0)
+    
+    rospy.sleep(2)
     bool_c = msg.data
     print (bool_c)
     body_up()
@@ -47,69 +36,41 @@ def body_up():
     arm.set_max_velocity_scaling_factor(1)
     gripper = moveit_commander.MoveGroupCommander("gripper")
 
-  
-
-    arm.set_named_target("home")
-    arm.go()
-
-      # ハンドを閉じる
-    gripper.set_joint_value_target([0.8, 0.8])
+    gripper.set_joint_value_target([0.9, 0.9])
     gripper.go()
+    rospy.sleep(2.0)
+    
+    #gripper.set_joint_value_target([0.7, 0.7])
+    #gripper.go()
 
+    # 左中
     target_pose = geometry_msgs.msg.Pose()
-    target_pose.position.x = 0.205045831868
-    target_pose.position.y = -0.0194597655966
-    target_pose.position.z = 0.309807278119
+    target_pose.position.x =  0.337012862721
+    target_pose.position.y =  0.0517014049579
+    target_pose.position.z =  0.14309330885
     q = quaternion_from_euler(-3.14, 0.0, -3.14/2.0)  # 上方から掴みに行く場合
-    target_pose.orientation.x = 0.474871942335
-    target_pose.orientation.y = 0.424353826113
-    target_pose.orientation.z = 0.514882237833
-    target_pose.orientation.w = 0.573861263557
-    arm.set_pose_target(target_pose)  # 目標ポーズ設定
-    arm.go()  # 実行take
-
-    target_pose = geometry_msgs.msg.Pose()
-    target_pose.position.x =  0.269119370689
-    target_pose.position.y = -0.0439712214052
-    target_pose.position.z = 0.138551614587
-    q = quaternion_from_euler(-3.14, 0.0, -3.14/2.0)  # 上方から掴みに行く場合
-    target_pose.orientation.x = 0.717972912926
-    target_pose.orientation.y = 0.671395173952
-    target_pose.orientation.z = 0.10624984559
-    target_pose.orientation.w =  0.149847879569
-    arm.set_pose_target(target_pose)  # 目標ポーズ設定
-    arm.go()  # 実行take
-
-    # ハンドを閉じる
-    gripper.set_joint_value_target([0.1, 0.1])
-    gripper.go()
-
-    arm.set_named_target("home")
-    arm.go()
-
-    # 物体を持ち上げる
-    target_pose = geometry_msgs.msg.Pose()
-    target_pose.position.x = -0.0372058227489
-    target_pose.position.y = -0.246006903877
-    target_pose.position.z = 0.169424000349
-    q = quaternion_from_euler(-3.14, 0.0, -3.14/2.0)  # 上方から掴みに行く場合
-    target_pose.orientation.x =  -0.475279946015
-    target_pose.orientation.y = 0.431250538961
-    target_pose.orientation.z = -0.753061012631
-    target_pose.orientation.w = 0.145020884072
+    target_pose.orientation.x = 0.632287438308
+    target_pose.orientation.y = -0.771793636354
+    target_pose.orientation.z = -0.0160233105463
+    target_pose.orientation.w = 0.065501387472
     arm.set_pose_target(target_pose)  # 目標ポーズ設定
     arm.go()  # 実行
 
-    gripper.set_joint_value_target([0.7, 0.7])
-    gripper.go()
+    rospy.sleep(2.0)
+
+
+   
     
     rospy.sleep(2.0)
 
        # ハンドを閉じる
-    gripper.set_joint_value_target([0.1, 0.1])
+    gripper.set_joint_value_target([0.4, 0.4])
     gripper.go()
-    
+    rospy.sleep(2.0)
     arm.set_named_target("home")
+    arm.go()
+    rospy.sleep(2.0)
+    arm.set_named_target("vertical")
     arm.go()
     print("done")
 

@@ -20,12 +20,13 @@ Gazebo 9.0.0
 
 ```sh	
 cd ~/catkin_ws/src/crane_x7_ros
+
 git clone -b final https://github.com/shuta-tech/crane_x7_ros/tree/final/crane_x7_edge
 ```
 
 ダウンロードして、実行許可がない場合は次のコマンドで許可与えてください。
 
-	$ chmod 777　ファイル名
+	chmod 777　ファイル名
 
 - 追加したパッケージをコンパイルしてくれるように~/catkin_ws/src/crane_x7_ros/crane_xにあるpackage.xmlに記入
   以下の写真のように26行目に以下の文を追加
